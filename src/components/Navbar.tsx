@@ -6,7 +6,7 @@ const Navbar = ({games} : {games:IGames}) => {
 
     return (
         <nav>
-        <div className="w-full bg-amber-50 mx-auto">
+        <div className="w-full bg-amber-950 mx-auto">
           <ul className="flex gap-4 justify-center">
             <li><Link to="/">Accueil</Link></li>
             <li><Link to="/pirates">Liste des Pirates</Link></li>
