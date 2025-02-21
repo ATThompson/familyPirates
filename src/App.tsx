@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom'
 import Home from './pages/Home'
 import GamesList from './pages/GamesList'
 import { useEffect } from 'react'
-import Dropdown from './components/Dropdown'
 import {IGames} from './types/IGame'
 import Router from './components/Router'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -37,17 +36,7 @@ function App() {
           <h1>Bienvenue les pirates!</h1>
         </center>
       </header>
-      <nav>
-        <div className="w-full bg-amber-50 mx-auto">
-          <ul className="flex gap-4 justify-center">
-            <li><Link to="/">Accueil</Link></li>
-            <li><Link to="/pirates">Liste des Pirates</Link></li>
-            <li className="relative">
-              <Dropdown games={games} />
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar games={games} />
       <Router games={games} />
     </div>
   )
