@@ -55,3 +55,7 @@ h1 {
   /* Safari workaround */
   transform: translateZ(0);
 }
+
+.shadowParchement {
+  box-shadow: inset 0px 0px 125px #8f5922, 2px 3px 20px #000000;
+}

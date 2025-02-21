@@ -10,7 +10,7 @@ const Router = ({ games }: { games: IGames }) => {
     return (
         <div className="h-fit px-[10%] py-4 bg-white">
             {/* Ajouter filter-wavy */}
-            <div className='h-fit shadow-[inset_0px_0px_125px_#8f5922,2px_3px_20px_#000000] bg-[#fffef0]' >
+            <div className='h-fit  bg-[#fffef0] shadowParchement' >
                 <div className='p-4 text-sm text-black text-center'>
                     <Routes>
                         <Route path="/" element={<Home />} key={"home"} />
