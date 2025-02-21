@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+.buttonLink {
+  display: inline-block; /* Pour que le lien ressemble à un bouton */
+  color: #646cff; /* Couleur de fond du bouton */
+ border-radius: 8px; /* Coins arrondis */
+  text-align: center; /* Centrer le texte à l'intérieur */
+  font-weight: 600; /* Poids de la police pour rendre le texte plus épais */
+  text-decoration: none; /* Retirer la décoration de texte */
+  transition: background-color 0.3s, transform 0.2s; /* Animation pour un effet visuel */
+}
+
+.buttonLink:hover {
+  color: #535bf2; /* Couleur de fond au survol */
+  cursor: pointer;
+}
+
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
