@@ -2,35 +2,25 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import PiratesList from './pages/PiratesList'
 import GamesList from './pages/GamesList'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import Vote from './pages/Vote'
 import Resultat from './pages/Resultat'
+import Dropdown from './components/Dropdown'
+import {IGame, IGames} from './types/IGame'
 
 function App() {
-  
-  
+
+
   useEffect(() => {
     console.log('Fetching data from the API...')
     fetch('/api')
-    .then(response => response.json())
+      .then(response => response.json())
       .then(data => console.log(data))
-  .catch((error) => console.error('Error:', error));
-  }, []) 
-
-    
-  // État pour gérer l'ouverture du dropdown
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const dropdownRef = useRef<any>(null)
+      .catch((error) => console.error('Error:', error));
+  }, [])
 
 
-
-  const buttonRef = useRef<any>(null)
-  // Fonction pour basculer l'état du dropdown
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen)
-  }
-
-  const games = [
+  const games: IGames = [
     {
       name: 'uno',
       rulesPage: <Home />,
@@ -40,26 +30,7 @@ function App() {
       rulesPage: <GamesList />,
     },
   ]
-  // Gestion du clic extérieur pour fermer le dropdown
-  useEffect(() => {
-    const handleClickOutside = (event:any) => {
-      // Si le clic est en dehors du dropdown et du bouton, fermer le dropdown
-      if (
-        dropdownRef.current && !dropdownRef.current.contains(event.target)
-        && buttonRef.current && !buttonRef.current.contains(event.target)
-      ) {
-        setIsDropdownOpen(false)
-      }
-    }
 
-    // Ajouter un écouteur d'événements pour le clic
-    document.addEventListener('click', handleClickOutside)
-
-    // Nettoyage de l'écouteur d'événements lors de la destruction du composant
-    return () => {
-      document.removeEventListener('click', handleClickOutside)
-    }
-  }, []) // L'effet est exécuté une seule fois, lors du montage du composant
 
   return (
     <div className="flex flex-col h-dvh">
@@ -74,26 +45,7 @@ function App() {
             <li><Link to="/">Accueil</Link></li>
             <li><Link to="/pirates">Liste des Pirates</Link></li>
             <li className="relative">
-              <button
-                ref={buttonRef}
-                onClick={toggleDropdown}
-                className="flex items-center buttonLink gap-2"
-              >
-                Règles des jeux
-              </button>
-              {/* Menu déroulant */}
-              {isDropdownOpen && (
-                <ul className="absolute bg-white border border-gray-200 w-full sm:w-48 shadow-lg" ref={dropdownRef}>
-                  {
-                    games.map(game => (
-                      <Link to={`/rules/${game.name}`} className="block py-2 px-4" onClick={() => setIsDropdownOpen(false)}>
-                        {game.name}
-                      </Link>
-                    ),
-                    )
-                  }
-                </ul>
-              )}
+              <Dropdown games={games} />
             </li>
           </ul>
         </div>
@@ -104,26 +56,25 @@ function App() {
         <div className='h-fit shadow-[inset_0px_0px_125px_#8f5922,2px_3px_20px_#000000] bg-[#fffef0]' >
           <div className='p-4 text-sm text-black text-center'>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/pirates" element={<PiratesList />} />
-              <Route path="/rules" element={<GamesList />} />
+              <Route path="/" element={<Home />} key={"home"} />
+              <Route path="/pirates" element={<PiratesList />} key={"pirates"} />
               {
-                games.map(game => <Route path={`/rules/${game.name}`} element={game.rulesPage} />)
+                games.map(game => <Route path={`/rules/${game.name}`} element={game.rulesPage} key={"rules" + game.name} />)
               }
-              <Route path="/vote" element={<Vote />} />
-              <Route path="/resultat" element={<Resultat />} />
+              <Route path="/vote" element={<Vote />} key={"vote"} />
+              <Route path="/resultat" element={<Resultat />} key={"resultat"} />
             </Routes>
           </div>
         </div>
       </div>
 
       <svg className="hidden">
-  <filter id="wavy2">
-    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
-    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
-  </filter>
-</svg>
-       </div>
+        <filter id="wavy2">
+          <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
+        </filter>
+      </svg>
+    </div>
   )
 }
 
