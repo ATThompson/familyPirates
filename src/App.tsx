@@ -10,9 +10,11 @@ function App() {
   
   
   useEffect(() => {
-    fetch('http://localhost:3001/api')
-      .then(response => response.json())
+    console.log('Fetching data from the API...')
+    fetch('/api')
+    .then(response => response.json())
       .then(data => console.log(data))
+  .catch((error) => console.error('Error:', error));
   }, []) 
 
     
