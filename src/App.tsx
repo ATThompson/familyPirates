@@ -7,11 +7,22 @@ import Vote from './pages/Vote'
 import Resultat from './pages/Resultat'
 
 function App() {
+  
+  
+  useEffect(() => {
+    fetch('http://localhost:3001/api')
+      .then(response => response.json())
+      .then(data => console.log(data))
+  }, []) 
+
+    
   // État pour gérer l'ouverture du dropdown
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const dropdownRef = useRef(null)
+  const dropdownRef = useRef<any>(null)
 
-  const buttonRef = useRef(null)
+
+
+  const buttonRef = useRef<any>(null)
   // Fonction pour basculer l'état du dropdown
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
@@ -29,7 +40,7 @@ function App() {
   ]
   // Gestion du clic extérieur pour fermer le dropdown
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event:any) => {
       // Si le clic est en dehors du dropdown et du bouton, fermer le dropdown
       if (
         dropdownRef.current && !dropdownRef.current.contains(event.target)

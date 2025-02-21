@@ -1,16 +1,27 @@
-import express from "express";
-import cors from "cors";
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Convertir l'URL du module en chemin de fichier
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
 
-app.use(cors());
-app.use(express.json());
+// Servir les fichiers statiques du dossier build de React
+app.use(express.static(path.join(__dirname, '../../dist')));
 
-app.get("/", (req, res) => {
-  res.json({ message: "Bienvenue sur le serveur Node.js avec TypeScript !" });
+// Route API
+app.get('/api', (req, res) => {
+  res.json({ message: 'Hello from the backend!' });
 });
 
+// Gérer le routage côté client
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
+});
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
