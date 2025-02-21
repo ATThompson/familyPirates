@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import PiratesList from "../pages/PiratesList";
 import Vote from "../pages/Vote";
 import Resultat from "../pages/Resultat";
+import Admin from "../pages/Admin";
 
 const Router = ({ games }: { games: IGames }) => {
 
@@ -18,8 +19,12 @@ const Router = ({ games }: { games: IGames }) => {
                         {
                             games.map(game => <Route path={`/rules/${game.name}`} element={game.rulesPage} key={"rules" + game.name} />)
                         }
-                        <Route path="/vote" element={<Vote />} key={"vote"} />
-                        <Route path="/resultat" element={<Resultat />} key={"resultat"} />
+                        <Route path="/admin"  >
+                            <Route index element={<Admin />} key={"admin"} />
+                            <Route path="vote" element={<Vote />} key={"vote"} />
+                            <Route path="resultat" element={<Resultat />} key={"resultat"} />
+                        </Route>
+                        <Route path="*" element={<Home />} key={"home"} />
                     </Routes>
                 </div>
             </div>
