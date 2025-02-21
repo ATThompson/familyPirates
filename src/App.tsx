@@ -85,19 +85,32 @@ function App() {
           </ul>
         </div>
       </nav>
-      <div className="bg-red-600 h-full p-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/pirates" element={<PiratesList />} />
-          <Route path="/rules" element={<GamesList />} />
-          {
-            games.map(game => <Route path={`/rules/${game.name}`} element={game.rulesPage} />)
-          }
-          <Route path="/vote" element={<Vote />} />
-          <Route path="/resultat" element={<Resultat />} />
-        </Routes>
+
+      <div className="h-fit px-[10%] py-4 bg-white">
+        {/* Ajouter filter-wavy */}
+        <div className='h-fit shadow-[inset_0px_0px_125px_#8f5922,2px_3px_20px_#000000] bg-[#fffef0]' >
+          <div className='p-4 text-sm text-black text-center'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/pirates" element={<PiratesList />} />
+              <Route path="/rules" element={<GamesList />} />
+              {
+                games.map(game => <Route path={`/rules/${game.name}`} element={game.rulesPage} />)
+              }
+              <Route path="/vote" element={<Vote />} />
+              <Route path="/resultat" element={<Resultat />} />
+            </Routes>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <svg className="hidden">
+  <filter id="wavy2">
+    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
+  </filter>
+</svg>
+       </div>
   )
 }
 
