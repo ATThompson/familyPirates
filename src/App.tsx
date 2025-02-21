@@ -1,12 +1,12 @@
 import Home from './pages/Home'
 import GamesList from './pages/GamesList'
 import { useEffect } from 'react'
-import {IGames} from './types/IGame'
+import { IGames } from './types/IGame'
 import Router from './components/Router'
 import Navbar from './components/Navbar'
+import Header from './components/Header'
 
 function App() {
-
 
   useEffect(() => {
     console.log('Fetching data from the API...')
@@ -31,11 +31,7 @@ function App() {
 
   return (
     <div className="flex flex-col h-dvh">
-      <header>
-        <center>
-          <h1>Bienvenue les pirates!</h1>
-        </center>
-      </header>
+      <Header />
       <Navbar games={games} />
       <Router games={games} />
     </div>
