@@ -39,8 +39,12 @@ app.get('*', (req, res) => {
 app.put('/api/joueurs/:id', (req, res) => {
   const { params: { id: idUser }, body: { value } } = req;
   const userIndex = joueurs.findIndex(user => user.id === parseInt(idUser));
-  joueurs[userIndex].piecesOr += value;
-  res.json(joueurs)
+  if(joueurs[userIndex].piecesOr + value < 0){
+    res.status(400).json({message: "La maison ne fait pas crédit"});;
+  }else{
+    joueurs[userIndex].piecesOr += value
+    res.json(joueurs)
+  }
 })
 
 
