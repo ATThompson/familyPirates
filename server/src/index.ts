@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
-import { joueurs as joueursInit} from './joueurs.js';
+import { joueurs as joueursInit } from './joueurs.js';
 
 // Convertir l'URL du module en chemin de fichier
 const __filename = fileURLToPath(import.meta.url);
@@ -26,7 +26,7 @@ app.get('/api/joueurs', (req, res) => {
 });
 
 app.get('/api/joueurs/sorted', (req, res) => {
-  res.json(joueurs.sort((joueurA, joueurB)=>{
+  res.json(joueurs.sort((joueurA, joueurB) => {
     return joueurB.piecesOr - joueurA.piecesOr
   }));
 });
@@ -36,10 +36,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
 });
 
-app.put('/api/joueurs/:id',(req,res)=> {
-  console.log(req)
-  const idUser = req.params.id;
-  const value = req.body.value;
+app.put('/api/joueurs/:id', (req, res) => {
+  const { params: { id: idUser }, body: { value } } = req;
   const userIndex = joueurs.findIndex(user => user.id === parseInt(idUser));
   joueurs[userIndex].piecesOr += value;
   res.json(joueurs)
