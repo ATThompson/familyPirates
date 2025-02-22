@@ -25,6 +25,12 @@ app.get('/api/joueurs', (req, res) => {
   res.json(joueurs);
 });
 
+app.get('/api/joueurs/sorted', (req, res) => {
+  res.json(joueurs.sort((joueurA, joueurB)=>{
+    return joueurB.piecesOr - joueurA.piecesOr
+  }));
+});
+
 // Gérer le routage côté client
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
@@ -38,6 +44,8 @@ app.put('/api/joueurs/:id',(req,res)=> {
   joueurs[userIndex].piecesOr += value;
   res.json(joueurs)
 })
+
+
 
 const PORT = process.env.PORT || 3001;
 

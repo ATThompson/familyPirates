@@ -1,6 +1,5 @@
 import Home from './pages/Home'
 import GamesList from './pages/GamesList'
-import { useEffect } from 'react'
 import { IGames } from './types/IGame'
 import Router from './components/Router'
 import Navbar from './components/Navbar'

@@ -11,11 +11,15 @@ const PiratesList = () => {
 
   useEffect(() => {
     console.log('Fetching data from the API...')
-    fetch('/api/joueurs')
+    getJoueursSorted();
+  }, [])
+
+    const getJoueursSorted = () => {
+      fetch('/api/joueurs/sorted')
       .then(response => response.json())
       .then(data => setJoueurs(data))
       .catch((error) => console.error('Error:', error));
-  }, [])
+    }
     const modifierNbPieces = (e:any,id: number, value: number) => {
       e.preventDefault();
       console.log('Ajouter une pièce pour le joueur avec l\'id', id);
@@ -36,9 +40,7 @@ const PiratesList = () => {
     <>
     <h1>🏴‍☠️ Liste des Pirates</h1>
     <div >
-      {joueurs.sort((joueurA, joueurB)=>{
-        return joueurB.piecesOr - joueurA.piecesOr
-      }).map(joueur => (
+      {joueurs.map(joueur => (
         <div key={joueur.id} className="grid grid-cols-3 self-center">
           <div>
             {joueur.nom}
@@ -55,6 +57,7 @@ const PiratesList = () => {
         </div>
       ))}
     </div>
+    <button onClick={getJoueursSorted}>Actualiser classement</button>
     </>
     );
   };
