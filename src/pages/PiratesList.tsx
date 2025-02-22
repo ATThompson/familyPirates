@@ -45,13 +45,15 @@ const PiratesList = () => {
           <div className="col-span-3"> 
             {joueur.nom}
           </div>
-          <div className="self-center">
+          <div>
 {joueur.piecesOr} 💰
             </div>
-          <div className="self-center">
+          <div>
 
           <button onClick={(e)=>modifierNbPieces(e,joueur.id, 1)}>✚💰</button>
           <button onClick={(e)=>modifierNbPieces(e,joueur.id, -1)}>−💰</button>
+
+          <button onClick={(e)=>modifierNbPieces(e,joueur.id, -4)}>✉️</button>
            </div> 
         
         </div>
