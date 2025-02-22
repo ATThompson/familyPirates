@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "ES2020", // ou "ESNext", "Node16", "NodeNext"
+     "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node" // Ajoutez cette ligne pour une meilleure résolution des modules
+    "resolveJsonModule": true,
   }
 }

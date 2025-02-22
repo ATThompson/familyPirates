@@ -8,13 +8,7 @@ import Header from './components/Header'
 
 function App() {
 
-  useEffect(() => {
-    console.log('Fetching data from the API...')
-    fetch('/api')
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch((error) => console.error('Error:', error));
-  }, [])
+  
 
 
   const games: IGames = [
