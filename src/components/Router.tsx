@@ -9,7 +9,7 @@ import Admin from "../pages/Admin";
 const Router = ({ games }: { games: IGames }) => {
 
     return (
-        <div className="h-fit px-[10%] py-4 bg-white">
+        <div className="h-fit px-[4%] py-4 bg-white">
             {/* Ajouter filter-wavy */}
             <div className='h-fit  bg-[#fffef0] shadowParchement' >
                 <div className='p-4 text-sm text-black text-center'>

@@ -41,12 +41,12 @@ const PiratesList = () => {
     <h1>🏴‍☠️ Liste des Pirates</h1>
     <div >
       {joueurs.map(joueur => (
-        <div key={joueur.id} className="grid grid-cols-3 self-center">
-          <div>
+        <div key={joueur.id} className="grid grid-cols-5 self-center">
+          <div className="col-span-3"> 
             {joueur.nom}
           </div>
           <div className="self-center">
-{joueur.piecesOr} pièces d'or 
+{joueur.piecesOr} 💰
             </div>
           <div className="self-center">
 

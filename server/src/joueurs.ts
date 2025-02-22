@@ -50,7 +50,7 @@ export const joueurs: {
   },
   {
     "id": 10,
-    "nom": "Maître contrebandier Gauthier",
+    "nom": "Contrebandier Gauthier",
     "piecesOr": 5
   },
   {
