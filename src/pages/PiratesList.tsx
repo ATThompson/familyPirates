@@ -12,7 +12,7 @@ const PiratesList = () => {
   useEffect(() => {
     getJoueursSorted();
   }, [])
-  
+
   const getJoueursSorted = () => {
     fetch('/api/joueurs/sorted')
       .then(response => response.json())
@@ -20,14 +20,15 @@ const PiratesList = () => {
       .catch((error) => console.error('Error:', error));
   }
 
-  const modifierNbPieces = (e: any, id: number, value: number) => {
+  const modifierNbPieces = (e: any, value: number) => {
     e.preventDefault();
-    fetch('/api/joueurs/' + id, {
+    fetch('/api/joueurs/', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
+        ids: joueursChecked,
         value
       })
     })
@@ -44,7 +45,7 @@ const PiratesList = () => {
               draggable: true,
               progress: undefined,
               theme: "light"
-              });
+            });
 
             throw new Error(`Erreur HTTP ${response.status}: ${errorData.message || 'Message d\'erreur inconnu'}`);
           });
@@ -54,27 +55,45 @@ const PiratesList = () => {
       .then(data => setJoueurs(data))
       .catch((error) => console.error('Error:', error));
   }
+
+  const [joueursChecked, setJoueursChecked] = useState<number[]>([]);
+
+  const handleOnChangeCheckbox = (e: any, id: number) => {
+    const target = e.target as HTMLInputElement;
+    if (target.checked) {
+      setJoueursChecked([...joueursChecked, id]);
+    } else {
+      setJoueursChecked(joueursChecked.filter(joueurId => joueurId !== id));
+    }
+  }
+
+  console.log(joueursChecked);
   return (
     <>
       <h1>🏴‍☠️ Liste des Pirates</h1>
-      <ToastContainer limit={1}/>
-      <div >
+      <ToastContainer limit={1} />
+      <div className="text-2xl">
         {joueurs.map(joueur => (
-          <div key={joueur.id} className="grid grid-cols-5 self-center">
-            <div className="col-span-3 flex gap-1">
+          <div key={joueur.id} className="flex self-center ">
+            <div className="flex w-full gap-1">
               <div>
                 {joueur.piecesOr}💰
               </div>
               {joueur.nom}
             </div>
-            <div className="flex col-span-2 gap-4 mx-auto">
-              <button onClick={(e) => modifierNbPieces(e, joueur.id, 1)}>✚💰</button>
-              <button onClick={(e) => modifierNbPieces(e, joueur.id, -1)}>−💰</button>
-              <button onClick={(e) => modifierNbPieces(e, joueur.id, -4)}>✉️</button>
-            </div>
-
+              <input
+                type="checkbox"
+                checked={joueursChecked.includes(joueur.id)}
+                onChange={(e) => handleOnChangeCheckbox(e, joueur.id)}
+                className="w-8 h-8 self-center"
+              />
           </div>
         ))}
+      </div>
+      <div className="flex gap-4 mx-auto">
+        <button onClick={(e) => modifierNbPieces(e, 1)}>✚💰</button>
+        <button onClick={(e) => modifierNbPieces(e, -1)}>−💰</button>
+        <button onClick={(e) => modifierNbPieces(e, -4)}>✉️</button>
       </div>
       <button onClick={getJoueursSorted}>Actualiser classement</button>
     </>

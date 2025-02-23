@@ -1,8 +1,5 @@
 @import "tailwindcss";
-* {
-  -webkit-appearance: none; /* Pour les navigateurs WebKit/Blink */
-  appearance: none; /* Version standard */
-}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

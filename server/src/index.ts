@@ -36,13 +36,19 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
 });
 
-app.put('/api/joueurs/:id', (req, res) => {
-  const { params: { id: idUser }, body: { value } } = req;
-  const userIndex = joueurs.findIndex(user => user.id === parseInt(idUser));
-  if(joueurs[userIndex].piecesOr + value < 0){
-    res.status(400).json({message: "La maison ne fait pas crédit"});;
-  }else{
-    joueurs[userIndex].piecesOr += value
+app.put('/api/joueurs', (req, res) => {
+  const { body: { value, ids } } = req;
+
+  const joueursError = joueurs.filter(user => ids.includes(user.id) && user.piecesOr + value < 0);
+
+  if (joueursError.length > 0) {
+    res.status(400).json({ message: "La maison ne fait pas crédit! " + joueursError.map(user => " "+ user.nom) });
+  }
+  else {
+    ids.forEach((id: string) => {
+      const userIndex = joueurs.findIndex(user => user.id === parseInt(id));
+      joueurs[userIndex].piecesOr += value
+    })
     res.json(joueurs)
   }
 })
