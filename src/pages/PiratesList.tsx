@@ -61,14 +61,12 @@ const PiratesList = () => {
       <div className="text-xl flex flex-col gap-y-2">
         {joueurs.map(joueur => (
           <div key={joueur.id} className="flex">
-            <div className="flex w-full gap-1">
-              <div className="flex items-center min-w-11">
-                <span>
-                  {joueur.piecesOr > 0 ? joueur.piecesOr + '💰' : 0 + '💸'}
-                </span>
+            <div className="flex w-full gap-0.5">
+              <div className="flex items-center w-11">
+                  {joueur.piecesOr }💰
               </div>
               {/* Nom du joueur qui peut s'étendre */}
-              <div className="flex-grow">{joueur.nom}</div>
+              <div className="flex-grow mx-auto ">{joueur.nom}</div>
               <div className="flex ml-auto self-center">
                 <button onClick={(e) => modifierNbPieces(e, joueur.id, -1)}>➖</button>
                 💰
