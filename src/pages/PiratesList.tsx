@@ -62,10 +62,8 @@ const PiratesList = () => {
         {joueurs.map(joueur => (
           <div key={joueur.id} className="flex">
             <div className="flex w-full gap-0.5">
-              <div className="flex items-center">
-                <span>
-                  {joueur.piecesOr + '💰' }
-                </span>
+              <div className="flex self-center w-fit">
+                  {joueur.piecesOr}<span>💰</span>
               </div>
               {/* Nom du joueur qui peut s'étendre */}
               <div className="flex-grow mx-auto ">{joueur.nom}</div>
