@@ -72,9 +72,9 @@ const PiratesList = () => {
     <>
       <h1>🏴‍☠️ Liste des Pirates</h1>
       <ToastContainer limit={1} />
-      <div className="text-2xl">
+      <div className="text-xl">
         {joueurs.map(joueur => (
-          <div key={joueur.id} className="flex self-center ">
+          <div key={joueur.id} className="flex">
             <div className="flex w-full gap-1">
               <div>
                 {joueur.piecesOr}💰
