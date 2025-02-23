@@ -65,7 +65,7 @@ export const joueurs: {
   },
   {
     "id": 13,
-    "nom": "Jacqueline La naufragée",
+    "nom": "Jacqueline la Naufragée",
     "piecesOr": 5
   },
   {
