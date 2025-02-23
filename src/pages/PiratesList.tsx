@@ -54,19 +54,6 @@ const PiratesList = () => {
       .then(data => setJoueurs(data))
       .catch((error) => console.error('Error:', error));
   }
-
-  const [joueursChecked, setJoueursChecked] = useState<number[]>([]);
-
-  const handleOnChangeCheckbox = (e: any, id: number) => {
-    const target = e.target as HTMLInputElement;
-    if (target.checked) {
-      setJoueursChecked([...joueursChecked, id]);
-    } else {
-      setJoueursChecked(joueursChecked.filter(joueurId => joueurId !== id));
-    }
-  }
-
-  console.log(joueursChecked);
   return (
     <>
       <h1>🏴‍☠️ Liste des Pirates</h1>
