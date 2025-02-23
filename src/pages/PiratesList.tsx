@@ -20,15 +20,14 @@ const PiratesList = () => {
       .catch((error) => console.error('Error:', error));
   }
 
-  const modifierNbPieces = (e: any, value: number) => {
+  const modifierNbPieces = (e: any, id: number, value: number) => {
     e.preventDefault();
-    fetch('/api/joueurs/', {
+    fetch('/api/joueurs/' + id, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        ids: joueursChecked,
         value
       })
     })
@@ -72,29 +71,31 @@ const PiratesList = () => {
     <>
       <h1>🏴‍☠️ Liste des Pirates</h1>
       <ToastContainer limit={1} />
-      <div className="text-xl">
+      <div className="text-xl flex flex-col gap-y-2">
         {joueurs.map(joueur => (
           <div key={joueur.id} className="flex">
             <div className="flex w-full gap-1">
-              <div>
-                {joueur.piecesOr}💰
+              <div className="flex items-center min-w-11">
+                <span>
+                  {joueur.piecesOr > 0 ? joueur.piecesOr + '💰' : 0 + '💸'}
+                </span>
               </div>
-              {joueur.nom}
+              {/* Nom du joueur qui peut s'étendre */}
+              <div className="flex-grow">{joueur.nom}</div>
+              <div className="flex ml-auto self-center">
+                <button onClick={(e) => modifierNbPieces(e, joueur.id, -1)}>➖</button>
+                💰
+                <button onClick={(e) => modifierNbPieces(e, joueur.id, 1)}>✚</button>
+              </div>
             </div>
-              <input
-                type="checkbox"
-                checked={joueursChecked.includes(joueur.id)}
-                onChange={(e) => handleOnChangeCheckbox(e, joueur.id)}
-                className="w-8 h-8 self-center"
-              />
           </div>
         ))}
       </div>
-      <div className="flex gap-4 mx-auto">
+      {/* <div className="flex gap-4 mx-auto">
         <button onClick={(e) => modifierNbPieces(e, 1)}>✚💰</button>
         <button onClick={(e) => modifierNbPieces(e, -1)}>−💰</button>
         <button onClick={(e) => modifierNbPieces(e, -4)}>✉️</button>
-      </div>
+      </div> */}
       <button onClick={getJoueursSorted}>Actualiser classement</button>
     </>
   );
