@@ -4,7 +4,7 @@ const Enigmes = () => {
     <div className="flex flex-col gap-y-4  items-center">
       <h2>📜 Règles 📜</h2>
       <div>
-        Ahoy, pirates ! Préparez-vous à défier vos esprits avec des énigmes.
+        Ahoy, pirates! Préparez-vous à défier vos esprits avec des énigmes.
       </div>
       <h3>
         🏺 Le Pot des Énigmes 🏺

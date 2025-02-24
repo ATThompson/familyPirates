@@ -4,7 +4,7 @@ const OuiNon = () => {
     <div className="flex flex-col gap-y-4 items-center">
       <h2>📜 Règles 📜</h2>
       <div>
-        Ahoy, pirates ! Préparez-vous à défier votre langue et votre esprit dans un jeu où le mot "Oui" et "on" sont bannis.
+        Ahoy, pirates! Préparez-vous à défier votre langue et votre esprit dans un jeu où le mot "Oui" et "on" sont bannis.
       </div>
       <h3>
         ⚰️Ni Oui Ni Non des Damnés⚰️
@@ -55,7 +55,7 @@ const OuiNon = () => {
           </li>
         </ul>
         <li>
-          Les vainqueurs se partageront l’or des autres pirates, et les autres devront se contenter de la mer ! 💎
+          Les vainqueurs se partageront l’or des autres pirates, et les autres devront se contenter de la mer! 💎
         </li>
       </ul>
       Cout de la participation au jeu : 1💰.

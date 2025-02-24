@@ -4,7 +4,7 @@ const MimeChaine = () => {
     <div className="flex flex-col gap-y-4  items-center">
       <h2>📜 Règles 📜</h2>
       <div>
-        Ahoy, pirates ! Préparez vous à devenir de vrais Johnny Depp.
+        Ahoy, pirates! Préparez vous à devenir de vrais Johnny Depp.
       </div>
       <h3>
         ☠️Le Mime à la chaîne des Pirates Perdus☠️
@@ -30,17 +30,17 @@ const MimeChaine = () => {
         </li>
         <ul className="list-disc list-inside pl-4">
           <li>
-            S'il trouve le bon mot, l'équipage gagne un point de gloire ! ✅
+            S'il trouve le bon mot, l'équipage gagne un point de gloire! ✅
           </li>
           <li>
             S'il se trompe, une houle de rires secoue les voiles du navire et le jeu continue avec un nouveau mot. 😂
           </li>
         </ul>
         <li>
-          ⚓ Une partie se joue au meilleur des trois manches, et l'équipage qui remporte au moins deux manches est couronné vainqueur de la traversée !
+          ⚓ Une partie se joue au meilleur des trois manches, et l'équipage qui remporte au moins deux manches est couronné vainqueur de la traversée!
         </li>
         <li>
-          🏆 L'équipage gagnant embarque tout l'or des pirates vaincus, s'emparant des pièces d'or des perdants comme un véritable flibustier ! 💰
+          🏆 L'équipage gagnant embarque tout l'or des pirates vaincus, s'emparant des pièces d'or des perdants comme un véritable flibustier! 💰
         </li>
       </ul>
       Cout de la participation pour une partie 1💰.

@@ -4,7 +4,7 @@ const BlindTest = () => {
     <div className="flex flex-col gap-y-4 items-center">
       <h2>📜 Règles 📜</h2>
       <div>
-        Ahoy, moussaillons ! Préparez-vous pour un défi musical où chaque pirate joue pour lui-même. Il y aura 16 écoutes au total, et seul le pirate le plus rusé saura prendre tout l'or du trésor !
+        Ahoy, moussaillons! Préparez-vous pour un défi musical où chaque pirate joue pour lui-même. Il y aura 16 écoutes au total, et seul le pirate le plus rusé saura prendre tout l'or du trésor!
       </div>
       <h3>
         🎶Musique des Flibustiers🎶
