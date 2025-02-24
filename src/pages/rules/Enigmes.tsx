@@ -1,6 +1,7 @@
+import './rules.css'
 const Enigmes = () => {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4  items-center">
       <h2>📜 Règles 📜</h2>
       <div>
         Ahoy, pirates ! Préparez-vous à défier vos esprits avec des énigmes.
@@ -8,7 +9,7 @@ const Enigmes = () => {
       <h3>
         🏺 Le Pot des Énigmes 🏺
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules">
         <li>
           Un pot est rempli d'énigmes, prêtes à être dévoilées à ceux assez audacieux pour y plonger.
         </li>

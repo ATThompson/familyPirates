@@ -1,0 +1,15 @@
+.ulRules {
+    list-style-type: disc; /* list-disc */
+    list-style-position: inside; /* list-inside */
+    padding-left: 1rem; /* px-4 */
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    gap: 0.25rem; /* gap-y-1 (1rem = 4px) */
+  }
+  
+  @media (min-width: 1024px) { /* lg:w-3xl corresponds to screens larger than or equal to 1024px */
+    .ulRules {
+      width: 48rem; /* lg:w-3xl (tailwind defaults 3xl = 48rem) */
+    }
+  }
+  

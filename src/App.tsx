@@ -38,7 +38,7 @@ function App() {
   ]
 
   return (
-    <div className="flex flex-col h-dvh">
+    <div className="flex flex-col h-dvh bg-[url(assets/bg.jpg)] bg-cover">
       <Header />
       <Navbar games={games} />
       <Router games={games} />

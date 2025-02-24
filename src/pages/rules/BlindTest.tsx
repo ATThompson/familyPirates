@@ -1,6 +1,7 @@
+import './rules.css'
 const BlindTest = () => {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4 items-center">
       <h2>📜 Règles 📜</h2>
       <div>
         Ahoy, moussaillons ! Préparez-vous pour un défi musical où chaque pirate joue pour lui-même. Il y aura 16 écoutes au total, et seul le pirate le plus rusé saura prendre tout l'or du trésor !
@@ -8,7 +9,7 @@ const BlindTest = () => {
       <h3>
         🎶Musique des Flibustiers🎶
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules">
         <li>
           8 morceaux de musique seront joués.
         </li>
@@ -25,7 +26,7 @@ const BlindTest = () => {
       <h3>
         🎬 Film des Corsaires🎬
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules">
         <li>
           8 bandes sonores de films célèbres seront jouées.
         </li>

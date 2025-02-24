@@ -1,6 +1,7 @@
+import './rules.css'
 const MotSecret = () => {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4  items-center">
       <h2>📜 Règles 📜</h2>
       <div>
         Ahoy, pirates ! Parlez-vous sans langue de bois.
@@ -8,7 +9,7 @@ const MotSecret = () => {
       <h3>
         🧟‍♀️Le Mot Maudit🧟‍♀️
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules">
         <li>
           Chaque flibustier reçoit en secret un mot maudit avant de commencer la causerie.
         </li>
@@ -19,7 +20,7 @@ const MotSecret = () => {
           Pendant que l'équipage discute, chaque pirate doit glisser son mot maudit dans la conversation sans éveiller les soupçons des autres forbans. Celui qui parle trop franchement risque de finir au bout d'une planche ! 🌊
         </li>
         <li>
-          Si un autre pirate soupçonne qu'un matelot a prononcé son mot maudit, il doit le crier bien fort devant l'équipage ! 📢
+          Si un autre pirate soupçonne qu'un matelot a prononcé son mot maudit, il doit le crier bien fort devant l'équipage!📢
         </li>
 
         <ul className="list-disc list-inside pl-4">

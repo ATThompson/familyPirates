@@ -1,14 +1,15 @@
+import './rules.css'
 const OuiNon = () => {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4 items-center">
       <h2>📜 Règles 📜</h2>
       <div>
-        Ahoy, pirates ! Préparez-vous à défier votre langue et votre esprit dans un jeu où le mot "Oui" et "Non" sont bannis.
+        Ahoy, pirates ! Préparez-vous à défier votre langue et votre esprit dans un jeu où le mot "Oui" et "on" sont bannis.
       </div>
       <h3>
         ⚰️Ni Oui Ni Non des Damnés⚰️
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules lg:w-3xl">
         <li>
           Chaque pirate commence avec 2 ancres en poche. ⚓
         </li>
@@ -26,7 +27,7 @@ const OuiNon = () => {
       <h3>
         ⏳ La Durée du Jeu ⏳
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules lg:w-3xl">
         <li>
           Le jeu dure 30 minutes.
         </li>
@@ -38,7 +39,7 @@ const OuiNon = () => {
       <h3>
         ⚔️ Le Classement Final et Les Gagnants ⚔️
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules lg:w-3xl">
         <li>
           Seuls les pirates classés dans la moitié supérieure du classement seront déclarés gagnants.
         </li>

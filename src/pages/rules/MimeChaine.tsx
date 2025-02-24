@@ -1,6 +1,7 @@
+import './rules.css'
 const MimeChaine = () => {
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4  items-center">
       <h2>📜 Règles 📜</h2>
       <div>
         Ahoy, pirates ! Préparez vous à devenir de vrais Johnny Depp.
@@ -8,7 +9,7 @@ const MimeChaine = () => {
       <h3>
         ☠️Le Mime à la chaîne des Pirates Perdus☠️
       </h3>
-      <ul className="list-disc list-inside px-4 flex flex-col gap-y-1">
+      <ul className="ulRules">
         <li>
           Les équipages sont tirés au sort à chaque nouvelle partie, pour que chaque flibustier ait sa chance de naviguer aux côtés d'autres forbans. 🎲
         </li>
