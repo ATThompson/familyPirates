@@ -1,58 +1,57 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify'
 const PiratesList = () => {
-
   const [joueurs, setJoueurs] = useState<{
-    id: number,
-    nom: string,
+    id: number
+    nom: string
     piecesOr: number
-  }[]>([]);
+  }[]>([])
 
   useEffect(() => {
-    getJoueursSorted();
+    getJoueursSorted()
   }, [])
 
   const getJoueursSorted = () => {
     fetch('/api/joueurs/sorted')
       .then(response => response.json())
       .then(data => setJoueurs(data))
-      .catch((error) => console.error('Error:', error));
+      .catch(error => console.error('Error:', error))
   }
 
-  const modifierNbPieces = (e: any, id: number, value: number) => {
-    e.preventDefault();
+  const modifierNbPieces = (e: React.MouseEvent<HTMLButtonElement>, id: number, value: number) => {
+    e.preventDefault()
     fetch('/api/joueurs/' + id, {
       method: 'PUT',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        value
-      })
+        value,
+      }),
     })
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
           // Récupérer le message d'erreur depuis le corps de la réponse
-          return response.json().then(errorData => {
+          return response.json().then((errorData) => {
             toast.error(errorData.message, {
-              position: "top-center",
+              position: 'top-center',
               autoClose: 3000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: "light"
-            });
+              theme: 'light',
+            })
 
-            throw new Error(`Erreur HTTP ${response.status}: ${errorData.message || 'Message d\'erreur inconnu'}`);
-          });
+            throw new Error(`Erreur HTTP ${response.status}: ${errorData.message || 'Message d\'erreur inconnu'}`)
+          })
         }
-        return response.json(); // Réponse réussie
+        return response.json() // Réponse réussie
       })
       .then(data => setJoueurs(data))
-      .catch((error) => console.error('Error:', error));
+      .catch(error => console.error('Error:', error))
   }
   return (
     <>
@@ -63,14 +62,15 @@ const PiratesList = () => {
           <div key={joueur.id} className="flex">
             <div className="flex w-full gap-0.5">
               <div className="flex self-center w-fit">
-                  {joueur.piecesOr}<span>💰</span>
+                {joueur.piecesOr}
+                <span>💰</span>
               </div>
               {/* Nom du joueur qui peut s'étendre */}
               <div className="flex-grow mx-auto ">{joueur.nom}</div>
               <div className="flex ml-auto self-center">
-                <button onClick={(e) => modifierNbPieces(e, joueur.id, -1)}>➖</button>
+                <button onClick={e => modifierNbPieces(e, joueur.id, -1)}>➖</button>
                 💰
-                <button onClick={(e) => modifierNbPieces(e, joueur.id, 1)}>✚</button>
+                <button onClick={e => modifierNbPieces(e, joueur.id, 1)}>✚</button>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const PiratesList = () => {
       </div> */}
       <button onClick={getJoueursSorted}>Actualiser classement</button>
     </>
-  );
-};
+  )
+}
 
-export default PiratesList;
+export default PiratesList
