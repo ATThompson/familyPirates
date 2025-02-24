@@ -1,6 +1,5 @@
 import { IGames } from './types/IGame'
 import Router from './components/Router'
-import Navbar from './components/Navbar'
 import Header from './components/Header'
 import BlindTest from './pages/rules/BlindTest'
 import Enigmes from './pages/rules/Enigmes'
@@ -8,6 +7,7 @@ import MimeChaine from './pages/rules/MimeChaine'
 import MotSecret from './pages/rules/MotSecret'
 import Osselets from './pages/rules/Osselets'
 import OuiNon from './pages/rules/OuiNon'
+import Parchment from './Parchment'
 
 function App() {
   const games: IGames = [
@@ -39,9 +39,14 @@ function App() {
 
   return (
     <div className="flex flex-col h-dvh bg-[url(assets/bg.jpg)] bg-cover">
-      <Header />
-      <Navbar games={games} />
-      <Router games={games} />
+      <div className="flex flex-col px-[4%] min-h-9 gap-4">
+        <Parchment>
+          <Header games={games} />
+        </Parchment>
+        <Parchment>
+          <Router games={games} />
+        </Parchment>
+      </div>
     </div>
   )
 }
