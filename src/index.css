@@ -70,12 +70,14 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateZ(0);
 }
 
 .wavy-parchment {
   position: relative;
   width: 100%;
   height: 100%; 
+  transform: translateZ(0);
  
 }
 
