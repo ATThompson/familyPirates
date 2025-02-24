@@ -40,7 +40,7 @@ const Parchment = ({ classNames, children }: {
     <div className={`wavy-container ${classNames}`}>
       <svg className="hidden">
         <filter id="wavy2">
-          <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"  result="turbulence" />
+          <feTurbulence x="0" y="0" baseFrequency="0.01 0.015" numOctaves="6" seed="1"  result="turbulence" />
           <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
         </filter>
       </svg>
