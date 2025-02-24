@@ -38,7 +38,7 @@ function App() {
   ]
 
   return (
-    <div className="flex flex-col min-h-dvh bg-[url(../public/bg.jpg)] bg-fixed bg-cover px-[4%] gap-4">
+    <div className="flex flex-col min-h-dvh bg-[url(/bg.jpg)] bg-fixed bg-cover px-[4%] gap-4">
       <Parchment>
         <Header games={games} />
       </Parchment>
