@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IGames } from '../types/IGame'
-import Parchment from '../Parchment'
+import Parchment from './Parchment'
 
 const Dropdown = ({ games }: { games: IGames }) => {
   // État pour gérer l'ouverture du dropdown

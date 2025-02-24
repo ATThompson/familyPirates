@@ -7,7 +7,7 @@ import MimeChaine from './pages/rules/MimeChaine'
 import MotSecret from './pages/rules/MotSecret'
 import Osselets from './pages/rules/Osselets'
 import OuiNon from './pages/rules/OuiNon'
-import Parchment from './Parchment'
+import Parchment from './components/Parchment'
 
 function App() {
   const games: IGames = [
