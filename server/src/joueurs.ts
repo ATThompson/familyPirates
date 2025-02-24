@@ -30,7 +30,7 @@ export const joueurs: {
   },
   {
     id: 7,
-    nom: 'Guerta Marie',
+    nom: 'Marie la Guerta',
     piecesOr: 5,
   },
   {

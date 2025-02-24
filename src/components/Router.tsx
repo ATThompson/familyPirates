@@ -8,10 +8,10 @@ import Admin from '../pages/Admin'
 
 const Router = ({ games }: { games: IGames }) => {
   return (
-    <div className="h-fit py-4">
+    <div className="h-fit p-4">
       {/* Ajouter filter-wavy */}
       <div className="h-fit">
-        <div className="p-4 text-sm text-black text-center">
+        <div className="text-sm text-black text-center">
           <Routes>
             <Route path="/" element={<Home />} key="home" />
             <Route path="/pirates" element={<PiratesList />} key="pirates" />

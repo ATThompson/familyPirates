@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { ToastContainer, toast } from 'react-toastify'
+import { Slide, ToastContainer, ToastOptions, toast } from 'react-toastify'
 const PiratesList = () => {
   const [joueurs, setJoueurs] = useState<{
     id: number
@@ -18,46 +18,59 @@ const PiratesList = () => {
       .then(data => setJoueurs(data))
       .catch(error => console.error('Error:', error))
   }
-
-  const modifierNbPieces = (e: React.MouseEvent<HTMLButtonElement>, id: number, value: number) => {
+  const modifierNbPieces = async (e: React.MouseEvent<HTMLButtonElement>, id: number, value: number) => {
     e.preventDefault()
-    fetch('/api/joueurs/' + id, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        value,
-      }),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          // Récupérer le message d'erreur depuis le corps de la réponse
-          return response.json().then((errorData) => {
-            toast.error(errorData.message, {
-              position: 'top-center',
-              autoClose: 3000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: 'light',
-            })
+    toast.dismiss()
+    const toastParam: ToastOptions = {
+      position: 'top-center',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+    }
 
-            throw new Error(`Erreur HTTP ${response.status}: ${errorData.message || 'Message d\'erreur inconnu'}`)
-          })
-        }
-        return response.json() // Réponse réussie
+    try {
+      const response = await fetch(`/api/joueurs/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ value }),
       })
-      .then(data => setJoueurs(data))
-      .catch(error => console.error('Error:', error))
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        toast.error(errorData.message, toastParam)
+        throw new Error(`Erreur HTTP ${response.status}: ${errorData.message || 'Message d\'erreur inconnu'}`)
+      }
+
+      const data = await response.json()
+      const joueur = joueurs.find(joueur => joueur.id === id)
+      const joueurNom = joueur ? joueur.nom : 'Joueur inconnu'
+
+      if (value > 0) {
+        toast.success(`1💰 ajouté pour ${joueurNom}`, toastParam)
+      }
+      else {
+        toast.warning(`1💰 supprimé pour ${joueurNom}`, toastParam)
+      }
+
+      setJoueurs(data)
+    }
+    catch (error) {
+      console.error('Error:', error)
+    }
   }
+
   return (
     <>
-      <h2 className="pb-6 mx-auto">🏴‍☠️Liste des Pirates🏴‍☠️</h2>
-      <ToastContainer limit={1} />
+      <h2 className="pb-6 mx-auto">🏴‍☠️Liste des Pirates🏴‍☠️ </h2>
+      <ToastContainer transition={Slide} />
       <div className="text-xl flex flex-col gap-y-2">
+
         {joueurs.map(joueur => (
           <div key={joueur.id} className="flex">
             <div className="flex w-full gap-0.5">
@@ -76,12 +89,9 @@ const PiratesList = () => {
           </div>
         ))}
       </div>
-      {/* <div className="flex gap-4 mx-auto">
-        <button onClick={(e) => modifierNbPieces(e, 1)}>✚💰</button>
-        <button onClick={(e) => modifierNbPieces(e, -1)}>−💰</button>
-        <button onClick={(e) => modifierNbPieces(e, -4)}>✉️</button>
-      </div> */}
-      <button onClick={getJoueursSorted}>Actualiser classement</button>
+      <div className="flex pt-4 text-xl">
+        <button className="ml-auto" onClick={getJoueursSorted}>🔄️ Actualiser classement</button>
+      </div>
     </>
   )
 }
