@@ -1,5 +1,3 @@
-import Home from './pages/Home'
-import GamesList from './pages/GamesList'
 import { IGames } from './types/IGame'
 import Router from './components/Router'
 import Navbar from './components/Navbar'
