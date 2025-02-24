@@ -47,6 +47,20 @@ h1 {
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.1;
+}
+
+ul {
+  text-align: left;
+}
+
 .filter-wavy {
   filter: url(#wavy2);
   /* Safari workaround */
