@@ -1,14 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Bilbo+Swash+Caps&display=swap');
 @import "tailwindcss";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Pirata One, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background: #000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,9 +24,8 @@ a:hover {
 .buttonLink {
   display: inline-block; /* Pour que le lien ressemble à un bouton */
   color: #646cff; /* Couleur de fond du bouton */
- border-radius: 8px; /* Coins arrondis */
+  border-radius: 8px; /* Coins arrondis */
   text-align: center; /* Centrer le texte à l'intérieur */
-  font-weight: 600; /* Poids de la police pour rendre le texte plus épais */
   text-decoration: none; /* Retirer la décoration de texte */
   transition: background-color 0.3s, transform 0.2s; /* Animation pour un effet visuel */
 }
@@ -93,6 +88,4 @@ ul {
 
 .content {
   position: relative;
-  font-family: "IM Fell English SC", serif;
-  color: #5a4636;
 }

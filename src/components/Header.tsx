@@ -3,9 +3,9 @@ import Navbar from './Navbar'
 
 const Header = ({ games }: { games: IGames }) => {
   return (
-    <header className="text-black p-2">
+    <header className="p-2">
       <center>
-        <h1>Bienvenue les pirates!</h1>
+        <h1>A l'abordage!</h1>
       </center>
       <Navbar games={games} />
     </header>

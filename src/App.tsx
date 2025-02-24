@@ -38,15 +38,13 @@ function App() {
   ]
 
   return (
-    <div className="flex flex-col h-dvh bg-[url(assets/bg.jpg)] bg-cover">
-      <div className="flex flex-col px-[4%] min-h-9 gap-4">
-        <Parchment>
-          <Header games={games} />
-        </Parchment>
-        <Parchment>
-          <Router games={games} />
-        </Parchment>
-      </div>
+    <div className="flex flex-col min-h-dvh bg-[url(../public/bg.jpg)] bg-fixed bg-cover px-[4%] gap-4">
+      <Parchment>
+        <Header games={games} />
+      </Parchment>
+      <Parchment>
+        <Router games={games} />
+      </Parchment>
     </div>
   )
 }
