@@ -73,10 +73,11 @@ ul {
 }
 
 .wavy-parchment {
+  will-change: filter, transform;
   position: relative;
   width: 100%;
   height: 100%; 
- 
+  transform: translateZ(0);
 }
 
 .wavy-bg {
