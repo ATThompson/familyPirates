@@ -12,6 +12,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 a {
   font-weight: 500;
   color: #646cff;
