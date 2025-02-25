@@ -74,8 +74,11 @@ ul {
   background-color: #f5deb3;
   box-shadow: inset 0px 0px 65px #8f5922, 2px 3px 20px #000000;
   will-change: filter;
-  filter: url(#wavy2);
+  -webkit-mask-image: url('../public/wavy-mask.svg'); /* Safari */
+  mask-image: url('../public/wavy-mask.svg'); 
   transform: translate3d(0, 0, 0);
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .content {
@@ -98,8 +101,9 @@ ul {
   box-shadow: inset 0px 0px 65px #8f5922, 2px 3px 20px #000000;
   content: "";
   position: absolute;
-  filter: url(#wavy2);
-  
+  -webkit-mask-image: url('../public/wavy-mask.svg'); /* Safari */
+  mask-image: url('../public/wavy-mask.svg'); 
+  mask-size: 100% 100%;
   transform: translate3d(0, 0, 0);
   top: 0;
   left: 0;
