@@ -72,22 +72,19 @@ ul {
   position: absolute;
   inset: 0;
   background-color: #f5deb3;
-  box-shadow: inset 0px 0px 65px #8f5922, 2px 3px 20px #000000;
+  box-shadow: inset 0px 0px 65px #8f5922, 2px 3px 500px #000000;
   will-change: filter;
   -webkit-mask-image: url('../public/wavy-mask.svg'); /* Safari */
   mask-image: url('../public/wavy-mask.svg'); 
   transform: translate3d(0, 0, 0);
-  -webkit-mask-size: cover;
-  mask-size: cover;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
 
 .content {
   position: relative;
 }
 
-.parent::after{
-  background-color: navy;
-}
 
 .parent{
   position: relative;
@@ -98,7 +95,7 @@ ul {
 
 .parent::before {
   background-color: #f5deb3;
-  box-shadow: inset 0px 0px 65px #8f5922, 2px 3px 20px #000000;
+  box-shadow: inset 0px 0px 100px #8f5922, 2px 3px 20px #000000;
   content: "";
   position: absolute;
   -webkit-mask-image: url('../public/wavy-mask.svg'); /* Safari */

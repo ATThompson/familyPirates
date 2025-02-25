@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="1000">
+<svg xmlns="http://www.w3.org/2000/svg" >
   <defs>
     <!-- Filtre pour donner un effet de bords irréguliers -->
     <filter id="burned-edge">
-      <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="10" seed="4" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="40"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="6" seed="1" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="60"/>
     </filter>
 
     <!-- Masque basé sur le filtre -->
