@@ -36,8 +36,6 @@ a:hover {
   cursor: pointer;
 }
 
-
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -57,15 +55,6 @@ ul {
   text-align: left;
 }
 
-.filter-wavy {
-  filter: url(#wavy2);
-  /* Safari workaround */
-  transform: translateZ(0);
-}
-
-.shadowParchement {
-  box-shadow: inset 0px 0px 125px #8f5922, 2px 3px 20px #000000;
-}
 .wavy-container {
   display: flex;
   justify-content: center;
@@ -73,11 +62,9 @@ ul {
 }
 
 .wavy-parchment {
-  will-change: filter, transform;
   position: relative;
   width: 100%;
   height: 100%; 
-  transform: translateZ(0);
 }
 
 .wavy-bg {
@@ -86,7 +73,6 @@ ul {
   background-color: #f5deb3;
   box-shadow: inset 0px 0px 65px #8f5922, 2px 3px 20px #000000;
   filter: url(#wavy2);
-  transform: translateZ(0);
 }
 
 .content {
