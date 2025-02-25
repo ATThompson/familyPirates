@@ -45,7 +45,7 @@ const Parchment = ({ classNames, children }: {
         </filter>
       </svg>
 
-      <div className="wavy-parchment" ref={parchmentRef}>
+      <div className="wavy-parchment" ref={parchmentRef} style={{ height }}>
         <div className="wavy-bg "></div>
         <div ref={contentRef} className={`content `}>{children}</div>
       </div>
