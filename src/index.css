@@ -73,6 +73,7 @@ ul {
   background-color: #f5deb3;
   box-shadow: inset 0px 0px 65px #8f5922, 2px 3px 20px #000000;
   filter: url(#wavy2);
+  transform: translateZ(0);
 }
 
 .content {
