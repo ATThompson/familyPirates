@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useRef, useState } from 'react'
+import { ReactElement, useEffect, useRef } from 'react'
 
 const Parchment = ({ classNames, children }: {
   classNames?: string
@@ -6,12 +6,11 @@ const Parchment = ({ classNames, children }: {
 }) => {
   const parchmentRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-  const [height, setHeight] = useState(0)
 
   useEffect(() => {
     const updateHeight = () => {
       if (contentRef.current) {
-        setHeight(contentRef.current.offsetHeight)
+        // setHeight(contentRef.current.offsetHeight)
       }
     }
 
@@ -40,12 +39,12 @@ const Parchment = ({ classNames, children }: {
     <div className={`wavy-container ${classNames}`}>
       <svg className="hidden">
         <filter id="wavy2">
-          <feTurbulence x="0" y="0" baseFrequency="0.01 0.015" numOctaves="6" seed="1" result="turbulence" />
+          <feTurbulence x="0" y="0" baseFrequency="0.015" numOctaves="6" seed="1" result="turbulence" />
           <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
         </filter>
       </svg>
 
-      <div className="wavy-parchment" ref={parchmentRef} style={{ height }}>
+      <div className="wavy-parchment" ref={parchmentRef}>
         <div className="wavy-bg "></div>
         <div ref={contentRef} className={`content `}>{children}</div>
       </div>

@@ -42,9 +42,9 @@ function App() {
       <Parchment>
         <Header games={games} />
       </Parchment>
-      <Parchment>
-        <Router games={games} />
-      </Parchment>
+      {/* <Parchment> */}
+      <Router games={games} />
+      {/* </Parchment> */}
     </div>
   )
 }

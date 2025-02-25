@@ -8,7 +8,7 @@ import Admin from '../pages/Admin'
 
 const Router = ({ games }: { games: IGames }) => {
   return (
-    <div className="h-fit p-4">
+    <div className="h-fit p-4 parent">
       {/* Ajouter filter-wavy */}
       <div className="h-fit">
         <div className="text-sm text-black text-center">
