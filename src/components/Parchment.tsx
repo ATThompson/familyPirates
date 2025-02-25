@@ -40,7 +40,7 @@ const Parchment = ({ classNames, children }: {
       <svg width="0" height="0">
         <filter id="wavy2" color-interpolation-filters="sRGB">
           <feTurbulence x="0" y="0" baseFrequency="0.015" numOctaves="6" seed="1" result="turbulence" />
-          <feDisplacementMap in2="turbulence" scale="15" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
         </filter>
       </svg>
 
