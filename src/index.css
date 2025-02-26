@@ -16,11 +16,12 @@
 a {
   font-weight: 500;
   color: black;
-  text-decoration: inherit;
 }
 
 a:hover {
   color: black;
+  text-decoration: underline;
+  text-decoration-color: #a40101;
 }
 
 .buttonLink {
@@ -36,6 +37,9 @@ a:hover {
 .buttonLink:hover {
   color: black; /* Couleur de fond au survol */
   cursor: pointer;
+
+  text-decoration: underline;
+  text-decoration-color: #a40101;
 }
 
 h1 {
@@ -89,3 +93,13 @@ ul {
   position: relative;
 }
 
+
+.cachet {
+  width: calc((100vw * 5) / 42);
+  height: auto; /* Height is auto ajusted */
+  margin-left: auto;
+}
+
+.signature {
+  font-size: calc(0.1rem + 2.5vw);
+}
