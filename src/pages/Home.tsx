@@ -1,21 +1,38 @@
 const Home = () => {
-    return (<div><center>
-      <h1>🏠 Accueil</h1>
-      </center>
-    <p>Il était une fois dans un monde lointain, où les montagnes se dressaient comme des géants endormis et les rivières chantaient des mélodies oubliées. Les habitants de ce royaume étrange vivaient en parfaite harmonie avec la nature, cultivant des jardins suspendus dans le ciel et échangeant des fruits d’or avec les nuages. Personne ne savait vraiment comment ces jardins avaient vu le jour, mais les anciens disaient que c’était le résultat d’un mystérieux pacte signé entre les oiseaux migrateurs et les étoiles filantes.
+  return (<div className="flex flex-col gap-y-4 items-center">
+      <h2>
+        🏴‍☠️ Bienvenue à bord 🏴‍☠️
+      </h2>
 
-Un jour, un vent doux souffla sur la vallée, apportant avec lui une brise parfumée qui semblait contenir des secrets des civilisations perdues. C’est alors que se produisit un événement qui changea le cours de l’histoire : un escargot géant, portant une carapace ornée de motifs complexes, fit son apparition. Personne n’avait jamais vu une créature aussi majestueuse. Les sages du village, qui passaient leur temps à méditer sous des arbres centenaires, déclarèrent que l’escargot était porteur d’un message divin.
+      <div>
 
-En attendant que ce message se révèle, les habitants décidèrent de préparer un banquet en l’honneur de cette créature mystérieuse. Des montagnes de pommes de terre furent cuites, et les rires résonnèrent jusqu’à ce que la lune, qui n’était jamais aussi brillante qu’en ce jour particulier, se leva haut dans le ciel. Certains prétendaient qu’elle avait un éclat différent, comme si elle observait attentivement les festivités.
+        Ahoy, moussaillons ! Aujourd’hui, vous embarquez pour une journée pleine d’aventures et de défis ! Chaque pirate commencera le voyage avec 6💰, mais attention… les richesses peuvent vite fondre comme un navire en pleine tempête !
+      </div>
+      <div>
+        ⚔️ Des jeux vous attendent, mais chaque participation vous coûtera quelques pièces… Saurez-vous en gagner plus que vous n’en perdez ? Retrouvez les détails des épreuves dans la section “Règles des jeux” !
 
-C’est alors qu’un homme étrange, vêtu d’une tunique argentée, arriva dans le village. Il ne semblait pas être de ce monde, avec des yeux brillants comme des pierres précieuses et un sourire énigmatique. Il s’approcha de l’escargot géant et, dans un murmure, prononça des mots qui résonnèrent dans l’air comme un écho lointain. À cet instant précis, l’escargot se réveilla et, avec une lente majesté, se mit à se déplacer en direction de la forêt des murmures.
+      </div>
+      <div>
+      🍹 Concours de déguisement à l’apéritif ! Avant de lever l’ancre, tous les pirates devront voter pour le plus beau déguisement. Le flibustier le plus impressionnant remportera 2💰!
+      </div>
+      <div>
 
-Les villageois, dans un mélange d’émerveillement et de confusion, suivirent la créature. Après des heures de marche, ils arrivèrent à une clairière où des arbres aux racines dorées formaient un cercle parfait. Au centre, une pierre géante reposait, sur laquelle étaient gravées des inscriptions anciennes que seul l’homme en tunique argentée semblait comprendre. Il s’agenouilla et toucha la pierre, et, soudainement, le sol se mit à vibrer, envoyant des ondes lumineuses à travers le royaume.
+        🏴‍☠️ Une chasse au trésor est lancée dans la maison ! Un indice crucial est dissimulé dans cette page… À vous de le dénicher pour mettre la main sur le fabuleux butin !
+      </div>
+      <div>
+        🎁Les trésors mystérieux sont à vendre ! Pour 2💰 vous recevrez une enveloppe renfermant un lot, une malédiction… ou rien du tout. Oserez-vous tenter votre chance ?
 
-Le ciel, d’un bleu profond, se déchira alors en une multitude de couleurs, chaque nuance représentant une époque différente de l’univers. Les nuages dansaient et formaient des motifs d’animaux légendaires, et les oiseaux, tout en chantant des airs nouveaux, prenaient des formes géométriques parfaites. Les habitants du village, bien que perdus dans cette mer de phénomènes étranges, se sentirent inexplicablement connectés à tout ce qui les entourait. Les sages, leurs yeux brillants de sagesse, murmurèrent qu’une nouvelle ère était en train de commencer, une ère où les mystères de l’univers seraient révélés dans une danse éternelle.</p>
-    
-    </div>);
-  };
-  
-  export default Home;
-  
+      </div>
+      <div>
+        ⚓ La grande enchère finale marquera la fin de ce grand jeu ! Avec les pièces qu’il vous reste, vous pourrez remporter de précieux trésors ! Serez-vous le pirate le plus rusé ou le plus démuni ?
+
+      </div>
+      <div>
+
+        Que la piraterie commence, et que le meilleur moussaillon l’emporte ! 🦜💀
+      </div>
+
+  </div>);
+};
+
+export default Home;

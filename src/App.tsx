@@ -44,9 +44,9 @@ function App() {
       <Parchment>
         <Header games={games} />
       </Parchment>
-      {/* <Parchment> */}
+      <Parchment>
       <Router games={games} />
-      {/* </Parchment> */}
+      </Parchment>
     </div>
   )
 }
