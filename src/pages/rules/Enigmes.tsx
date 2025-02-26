@@ -14,11 +14,11 @@ const Enigmes = () => {
           Un pot est rempli d'énigmes, prêtes à être dévoilées à ceux assez audacieux pour y plonger.
         </li>
         <li>
-          Pour prendre une énigme, le pirate doit déposer une pièce d’or dans le pot. 💰
+          Pour prendre une énigme, le pirate doit déposer 1💰 dans le pot.
         </li>
         <ul className="list-disc list-inside pl-4">
           <li>
-            Une seule réponse est autorisée. Si le pirate donne la bonne réponse, il remporte une pièce d’or en récompense.
+            Une seule réponse est autorisée. Si le pirate donne la bonne réponse, il remporte sa mise plus 1💰 supplémentaire.
           </li>
           <li>
             Si le pirate donne la mauvaise réponse, il perd une pièce d’or. 🏴‍☠️
