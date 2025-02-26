@@ -3,6 +3,7 @@ const BlindTest = () => {
   return (
     <div className="flex flex-col gap-y-4 items-center">
       <h2>📜 Règles 📜</h2>
+      <div className='text-lg flex flex-col gap-y-4 '>
       <div>
         Ahoy, moussaillons! Préparez-vous pour un défi musical où chaque pirate joue pour lui-même. Il y aura 16 écoutes au total, et seul le pirate le plus rusé saura prendre tout l'or du trésor!
       </div>
@@ -41,6 +42,7 @@ const BlindTest = () => {
       </ul>
       Cout de la participation au jeu : 1💰.
     </div>
+      </div>
   )
 }
 

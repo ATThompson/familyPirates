@@ -14,7 +14,7 @@ const Home = () => {
       <div className="flex flex-col gap-y-4">
         <h2>Bienvenue à bord!⚔️</h2>
         {content.map((text, index) => (
-          <div key={index}>{text}</div>
+          <div key={index} className="text-base">{text}</div>
         ))}
       </div>
       <div className="w-[65%] pt-4">

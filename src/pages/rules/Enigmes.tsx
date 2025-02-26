@@ -1,7 +1,7 @@
 import './rules.css'
 const Enigmes = () => {
   return (
-    <div className="flex flex-col gap-y-4  items-center">
+    <div className="flex flex-col gap-y-4 items-center">
       <h2>📜 Règles 📜</h2>
       <div>
         Ahoy, pirates! Préparez-vous à défier vos esprits avec des énigmes.
