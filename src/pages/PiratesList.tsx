@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { Slide, ToastContainer, ToastOptions, toast } from 'react-toastify'
+import { ToastOptions, toast } from 'react-toastify'
 const PiratesList = () => {
   const [joueurs, setJoueurs] = useState<{
     id: number
@@ -68,7 +68,7 @@ const PiratesList = () => {
   return (
     <>
       <h2 className="pb-6 mx-auto">Liste des Pirates🏴‍☠️ </h2>
-      <ToastContainer transition={Slide} />
+
       <div className="text-lg flex flex-col gap-y-2">
 
         {joueurs.map(joueur => (

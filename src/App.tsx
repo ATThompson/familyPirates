@@ -8,6 +8,7 @@ import MotSecret from './pages/rules/MotSecret'
 import Osselets from './pages/rules/Osselets'
 import OuiNon from './pages/rules/OuiNon'
 import Parchment from './components/Parchment'
+import { Slide, ToastContainer } from 'react-toastify'
 
 function App() {
   const games: IGames = [
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-dvh bg-[url(/bg.jpg)] bg-fixed bg-cover px-[4%] gap-4">
+      <ToastContainer transition={Slide} />
       <Parchment>
         <Header games={games} />
       </Parchment>
