@@ -10,7 +10,7 @@ const OuiNon = () => {
         <h3>
           ⚰️ Ni Oui Ni Non des Damnés ⚰️
         </h3>
-        <ul className="ulRules lg:w-3xl">
+        <ul className="ulRules">
           <li>
             Chaque pirate commence avec 2 ancres en poche. ⚓
           </li>
@@ -28,7 +28,7 @@ const OuiNon = () => {
         <h3>
           ⏳ Durée du Jeu ⏳
         </h3>
-        <ul className="ulRules lg:w-3xl">
+        <ul className="ulRules">
           <li>
             Le jeu dure 30 minutes.
           </li>
@@ -40,7 +40,7 @@ const OuiNon = () => {
         <h3>
           ⚔️ Les Gagnants ⚔️
         </h3>
-        <ul className="ulRules lg:w-3xl">
+        <ul className="ulRules">
           <li>
             Seuls les pirates classés dans la moitié supérieure du classement seront déclarés gagnants.
           </li>

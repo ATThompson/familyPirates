@@ -5,7 +5,7 @@ const Regles = ({ children }: { children: ReactElement }) => {
         <div className="flex flex-col gap-y-4  items-center">
             <h2>Règles</h2>
 
-            <div className='text-lg flex flex-col gap-y-4 '>
+            <div className='text-lg flex flex-col gap-y-4 lg:w-3xl'>
                 {children}
             </div>
         </div>
