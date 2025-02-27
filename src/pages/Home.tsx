@@ -12,13 +12,13 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col gap-y-4">
-        <h2>Bienvenue à bord!⚔️</h2>
+        <h2>Bienvenue à bord!</h2>
         {content.map((text, index) => (
-          <div key={index} className="text-base">{text}</div>
+          <div key={index} className="text-lg">{text}</div>
         ))}
       </div>
       <div className="w-[65%] pt-4">
-        <img className="cachet" src="https://i.postimg.cc/4NBYNqCR/22.png"/>
+        <img className="cachet" src="https://i.postimg.cc/4NBYNqCR/22.png" />
       </div>
       <p className="ml-auto signature">Capitaine Antoine "Barbe Rousse" Thompson</p>
     </div>

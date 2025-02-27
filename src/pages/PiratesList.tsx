@@ -67,7 +67,7 @@ const PiratesList = () => {
 
   return (
     <>
-      <h2 className="pb-6 mx-auto">Liste des Pirates🏴‍☠️ </h2>
+      <h2 className="pb-6 mx-auto">Liste des Pirates</h2>
 
       <div className="text-lg flex flex-col gap-y-2">
 

@@ -1,48 +1,47 @@
-import './rules.css'
+import Regles from '../../components/Regles'
 const BlindTest = () => {
   return (
-    <div className="flex flex-col gap-y-4 items-center">
-      <h2>📜 Règles 📜</h2>
-      <div className='text-lg flex flex-col gap-y-4 '>
-      <div>
-        Ahoy, moussaillons! Préparez-vous pour un défi musical où chaque pirate joue pour lui-même. Il y aura 16 écoutes au total, et seul le pirate le plus rusé saura prendre tout l'or du trésor!
-      </div>
-      <h3>
-        🎶Musique des Flibustiers🎶
-      </h3>
-      <ul className="ulRules">
-        <li>
-          8 morceaux de musique seront joués.
-        </li>
-        <ul className="list-disc list-inside pl-4">
+    <Regles>
+      <>
+        <div>
+          Ahoy, moussaillons! Préparez-vous pour un défi musical où chaque pirate joue pour lui-même. Il y aura 16 écoutes au total, et seul le pirate le plus rusé saura prendre tout l'or du trésor!
+        </div>
+        <h3>
+          🎶 Musique des Flibustiers 🎶
+        </h3>
+        <ul className="ulRules">
           <li>
-            1 pièce d’or sera attribuée au pirate qui devine le chanteur de la chanson. 🎤
+            8 morceaux de musique seront joués.
           </li>
-          <li>
-            1 pièce d’or supplémentaire pour le pirate qui devine le titre exact de la musique. 🎶
-          </li>
+          <ul className="list-disc list-inside pl-4">
+            <li>
+              1 pièce d’or sera attribuée au pirate qui devine le chanteur de la chanson. 🎤
+            </li>
+            <li>
+              1 pièce d’or supplémentaire pour le pirate qui devine le titre exact de la musique. 🎶
+            </li>
+          </ul>
         </ul>
-      </ul>
 
-      <h3>
-        🎬 Film des Corsaires🎬
-      </h3>
-      <ul className="ulRules">
-        <li>
-          8 bandes sonores de films célèbres seront jouées.
-        </li>
-        <ul className="list-disc list-inside pl-4">
+        <h3>
+          🎬 Film des Corsaires 🎬
+        </h3>
+        <ul className="ulRules">
           <li>
-            1 pièce d’or sera attribuée au pirate qui devine correctement le titre du film. 🎥
+            8 bandes sonores de films célèbres seront jouées.
           </li>
-          <li>
-            1 pièce d’or supplémentaire pour celui qui peut nommer l’acteur principal ou le réalisateur du film. 🎬
-          </li>
+          <ul className="list-disc list-inside pl-4">
+            <li>
+              1 pièce d’or sera attribuée au pirate qui devine correctement le titre du film. 🎥
+            </li>
+            <li>
+              1 pièce d’or supplémentaire pour celui qui peut nommer l’acteur principal ou le réalisateur du film. 🎬
+            </li>
+          </ul>
         </ul>
-      </ul>
-      Cout de la participation au jeu : 1💰.
-    </div>
-      </div>
+        Cout de la participation au jeu : 1💰.
+      </>
+    </Regles >
   )
 }
 
