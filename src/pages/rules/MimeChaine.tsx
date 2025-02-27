@@ -2,14 +2,11 @@ import Regles from "../../components/Regles"
 
 const MimeChaine = () => {
   return (
-    <Regles>
+    <Regles title="Mime à la chaîne">
       <>
         <div>
           Ahoy, pirates! Préparez vous à devenir de vrais Johnny Depp.
         </div>
-        <h3>
-          ☠️ Le Mime à la chaîne des Pirates Perdus ☠️
-        </h3>
         <ul className="ulRules">
           <li>
             Les équipages sont tirés au sort à chaque nouvelle partie, pour que chaque flibustier ait sa chance de naviguer aux côtés d'autres forbans.

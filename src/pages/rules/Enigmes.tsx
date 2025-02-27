@@ -2,14 +2,11 @@ import Regles from "../../components/Regles"
 
 const Enigmes = () => {
   return (
-    <Regles>
+    <Regles title="Le Pot des Énigmes">
       <>
         <div>
           Ahoy, pirates! Préparez-vous à défier vos esprits avec des énigmes.
         </div>
-        <h3>
-          🏺 Le Pot des Énigmes 🏺
-        </h3>
         <ul className="ulRules">
           <li>
             Un pot est rempli d'énigmes, prêtes à être dévoilées à ceux assez audacieux pour y plonger.
@@ -19,10 +16,13 @@ const Enigmes = () => {
           </li>
           <ul className="list-disc list-inside pl-4">
             <li>
-              Une seule réponse est autorisée. Si le pirate donne la bonne réponse, il remporte sa mise plus 1💰 supplémentaire.
+              Une seule réponse est autorisée.
             </li>
             <li>
-              Si le pirate donne la mauvaise réponse, il perd une pièce d’or. 🏴‍☠️
+              Si le pirate donne la bonne réponse, il remporte 2💰.
+            </li>
+            <li>
+              Si le pirate donne la mauvaise réponse, il a perdu. 🏴‍☠️
             </li>
           </ul>
 

@@ -2,14 +2,11 @@ import Regles from "../../components/Regles"
 
 const OuiNon = () => {
   return (
-    <Regles>
+    <Regles title="Ni Oui Ni Non">
       <>
         <div>
           Ahoy, pirates! Préparez-vous à défier votre langue et votre esprit dans un jeu où le mot "Oui" et "Non" sont bannis.
         </div>
-        <h3>
-          ⚰️ Ni Oui Ni Non des Damnés ⚰️
-        </h3>
         <ul className="ulRules">
           <li>
             Chaque pirate commence avec 2 ancres en poche. ⚓

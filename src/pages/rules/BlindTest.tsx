@@ -1,13 +1,13 @@
 import Regles from '../../components/Regles'
 const BlindTest = () => {
   return (
-    <Regles>
+    <Regles title="Blind Test">
       <>
         <div>
           Ahoy, moussaillons! Préparez-vous pour un défi musical où chaque pirate joue pour lui-même. Il y aura 16 écoutes au total, et seul le pirate le plus rusé saura prendre tout l'or du trésor!
         </div>
         <h3>
-          🎶 Musique des Flibustiers 🎶
+          🎶 Musique des Forbans 🎶
         </h3>
         <ul className="ulRules">
           <li>

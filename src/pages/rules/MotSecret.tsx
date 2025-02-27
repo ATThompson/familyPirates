@@ -2,14 +2,11 @@ import Regles from "../../components/Regles"
 
 const MotSecret = () => {
   return (
-    <Regles>
+    <Regles title="Le Mot Maudit">
       <>
         <div>
           Ahoy, pirates! Parlez-vous sans langue de bois.
         </div>
-        <h3>
-          🧟‍♀️Le Mot Maudit🧟‍♀️
-        </h3>
         <ul className="ulRules">
           <li>
             Chaque flibustier reçoit en secret un mot maudit avant de commencer la causerie.

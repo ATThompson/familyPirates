@@ -10,7 +10,7 @@ const Home = () => {
     "Avant de lever l’ancre pour l'apéritif, tous les pirates devront voter pour le plus beau déguisement. Le marin d'eau douce le plus impressionnant remportera 2💰!",
     "🏴‍☠️ Chasse au trésor 🏴‍☠️",
     <div><button onClick={() => setShowPopup(true)} className="underline decoration-[#a40101]">Le premier indice </button> est dissimulé dans cette page… À vous de le dénicher pour mettre la main sur le fabuleux butin!🔍</div>,
-    "🎁 Des trésors mystérieux sont à vendre ! 🎁",
+    "🎁 Des trésors mystérieux! 🎁",
     "Pour 2💰 vous recevrez une enveloppe renfermant un lot, une malédiction… ou rien du tout. Oserez-vous tenter votre chance ?",
     "🤑 La grande enchère finale 🤑",
     "Cela marquera la fin de ce grand jeu ! Avec les 💰 qu’il vous restera, vous pourrez enchérir et remporter de précieux trésors ! Serez-vous le pirate le plus rusé ou le plus démuni ?",
@@ -27,8 +27,8 @@ const Home = () => {
           {/* Contenu du popup (sans opacité) */}
           <div className="relative z-50 bg-white p-4 lg:max-w-52 rounded-lg flex flex-col gap-y-2">
             <h2>🎉 Indice 🎉</h2>
-            <p>Quand la mer est agitée, on y fait escale.</p>
             <p>Un lieu caché, mais pourtant banal.</p>
+            <p>Quand la mer est agitée, on y fait escale.🤮</p>
             <p>Cherche où les souvenirs sont gardés avec égard… 📸</p>
             <br />
             <p> PS : Aucun placard ni armoire n'a besoin d'être ouvert pour résoudre cette chase au trésor.</p>
