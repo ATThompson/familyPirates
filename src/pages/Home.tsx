@@ -9,7 +9,7 @@ const Home = () => {
     "🎭 Concours de déguisement 🎭",
     "Avant de lever l’ancre pour l'apéritif, tous les pirates devront voter pour le plus beau déguisement. Le marin d'eau douce le plus impressionnant remportera 2💰!",
     "🏴‍☠️ Chasse au trésor 🏴‍☠️",
-    <div><button onClick={() => setShowPopup(true)} className="underline decoration-[#a40101]">Le premier indice </button> est dissimulé dans cette page… À vous de le dénicher pour mettre la main sur le fabuleux butin!🔍</div>,
+    <div><button onClick={() => setShowPopup(true)} className="cursor-pointer underline decoration-[#a40101]">Le premier indice </button> est dissimulé dans cette page… À vous de le dénicher pour mettre la main sur le fabuleux butin!🔍</div>,
     "🎁 Des trésors mystérieux! 🎁",
     "Pour 2💰 vous recevrez une enveloppe renfermant un lot, une malédiction… ou rien du tout. Oserez-vous tenter votre chance ?",
     "🤑 La grande enchère finale 🤑",
@@ -21,10 +21,7 @@ const Home = () => {
     <>
       {showPopup && (
         <div className="fixed top-0 right-0 left-0 w-full h-full z-40 flex items-center justify-center">
-          {/* Fond noir semi-transparent */}
           <div className="absolute inset-0 bg-black opacity-70"></div>
-
-          {/* Contenu du popup (sans opacité) */}
           <div className="relative z-50 bg-white p-4 lg:max-w-52 rounded-lg flex flex-col gap-y-2">
             <h2>🎉 Indice 🎉</h2>
             <p>Un lieu caché, mais pourtant banal.</p>
@@ -32,7 +29,7 @@ const Home = () => {
             <p>Cherche où les souvenirs sont gardés avec égard… 📸</p>
             <br />
             <p> PS : Aucun placard ni armoire n'a besoin d'être ouvert pour résoudre cette chase au trésor.</p>
-            <button onClick={() => setShowPopup(false)} className="text-[#a40101]">Fermer l'indice</button>
+            <button onClick={() => setShowPopup(false)} className="text-[#a40101] cursor-pointer">Fermer l'indice</button>
           </div>
         </div >
       )}
