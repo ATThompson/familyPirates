@@ -46,7 +46,10 @@ const Osselets = () => {
             Le pirate qui réussit toutes les épreuves sans faute gagne la moitié du trésor du Capitaine!
           </li>
           <li>
-            Le trésor ne contiendra jamais moins de 6💰. Le Capitaine renflouera avec sa cagnotte personnelle.
+            Le trésor ne contiendra jamais moins de 6💰.
+          </li>
+          <li>
+            Le Capitaine renflouera avec sa cagnotte personnelle, si besoin.
           </li>
           <li>
             Si le trésor contient un nombre impair de pièces, le pirate gagne la moitié supérieur du trésor.
