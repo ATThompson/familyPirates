@@ -24,7 +24,7 @@ const BlindTest = () => {
         </ul>
 
         <h3>
-          🎬 Film des Corsaires 🎬
+          🎬 7ème art des Corsaires 🎬
         </h3>
         <ul className="ulRules">
           <li>
