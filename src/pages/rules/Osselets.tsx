@@ -37,7 +37,7 @@ const Osselets = () => {
             Ramassez les quatres ossselets en une seule fois.
           </li>
         </ul>
-        <h3>🏆 Gloire & Richesse 🏆</h3>
+        <h3>🏆 Gloire 🏆</h3>
         <ul className="ulRules">
           <li>
             Le moussaillon qui participe à le droit un tour d'entraînement avant de commencer le jeu.

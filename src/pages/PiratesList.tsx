@@ -67,31 +67,33 @@ const PiratesList = () => {
 
   return (
     <>
-      <h2 className="pb-6 mx-auto">Liste des Pirates</h2>
+      {joueurs.length > 0 && <>
+        <h2 className="pb-6 mx-auto">Liste des Pirates</h2>
 
-      <div className="text-lg flex flex-col gap-y-2">
+        <div className="text-lg flex flex-col gap-y-2">
 
-        {joueurs.map(joueur => (
-          <div key={joueur.id} className="flex">
-            <div className="flex w-full gap-0.5">
-              <div className="flex self-center w-fit">
-                {joueur.piecesOr}
-                <span>💰</span>
-              </div>
-              {/* Nom du joueur qui peut s'étendre */}
-              <div className="flex-grow mx-auto ">{joueur.nom}</div>
-              <div className="flex ml-auto self-center">
-                <button onClick={e => modifierNbPieces(e, joueur.id, -1)}>➖</button>
-                💰
-                <button onClick={e => modifierNbPieces(e, joueur.id, 1)}>✚</button>
+          {joueurs.map(joueur => (
+            <div key={joueur.id} className="flex">
+              <div className="flex w-full gap-0.5">
+                <div className="flex self-center w-fit">
+                  {joueur.piecesOr}
+                  <span>💰</span>
+                </div>
+                {/* Nom du joueur qui peut s'étendre */}
+                <div className="flex-grow mx-auto ">{joueur.nom}</div>
+                <div className="flex ml-auto self-center">
+                  <button onClick={e => modifierNbPieces(e, joueur.id, -1)}>➖</button>
+                  💰
+                  <button onClick={e => modifierNbPieces(e, joueur.id, 1)}>✚</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex pt-4 text-xl">
-        <button className="ml-auto" onClick={getJoueursSorted}>🔄️ Actualiser classement</button>
-      </div>
+          ))}
+        </div>
+        <div className="flex pt-4 text-xl">
+          <button className="ml-auto" onClick={getJoueursSorted}>🔄️ Actualiser classement</button>
+        </div>
+      </>}
     </>
   )
 }

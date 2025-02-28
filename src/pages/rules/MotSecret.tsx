@@ -18,7 +18,7 @@ const MotSecret = () => {
             Pendant que l'équipage discute, chaque pirate doit glisser son mot maudit dans la conversation sans éveiller les soupçons des autres forbans. Celui qui parle trop franchement risque de finir au bout d'une planche! 🌊
           </li>
           <li>
-            Si un autre pirate soupçonne qu'un matelot a prononcé son mot maudit, il doit le crier bien fort devant l'équipage!📢
+            Si un autre pirate soupçonne qu'un matelot a prononcé son mot maudit, il doit le crier bien fort devant l'équipage !
           </li>
 
           <ul className="list-disc list-inside pl-4">
