@@ -15,10 +15,10 @@ const BlindTest = () => {
           </li>
           <ul className="list-disc list-inside pl-4">
             <li>
-              1 pièce d’or sera attribuée au pirate qui devine le chanteur de la chanson. 🎤
+              1💰 sera attribuée au pirate qui devine le chanteur de la chanson.
             </li>
             <li>
-              1 pièce d’or supplémentaire pour le pirate qui devine le titre exact de la musique. 🎶
+              1💰 supplémentaire pour le pirate qui devine le titre exact de la musique.
             </li>
           </ul>
         </ul>
@@ -30,12 +30,12 @@ const BlindTest = () => {
           <li>
             8 bandes sonores de films célèbres seront jouées.
           </li>
-          <ul className="list-disc list-inside pl-4">
+          <ul className="list-disc list-inside pl-4 text-wrap">
             <li>
-              1 pièce d’or sera attribuée au pirate qui devine correctement le titre du film. 🎥
+              1💰 sera attribuée au pirate qui devine correctement le titre du film.
             </li>
             <li>
-              1 pièce d’or supplémentaire pour celui qui peut nommer l’acteur principal ou le réalisateur du film. 🎬
+              1💰 supplémentaire pour celui qui peut nommer l’acteur principal ou le réalisateur du film. 🎬
             </li>
           </ul>
         </ul>

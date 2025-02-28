@@ -23,14 +23,14 @@ const MotSecret = () => {
 
           <ul className="list-disc list-inside pl-4">
             <li>
-              S'il dit vrai, le pirate démasqué doit lui remettre une pièce d'or tirée de son trésor personnel. 💰
+              S'il dit vrai, le pirate démasqué doit lui remettre une 💰 tirée de son trésor personnel.
             </li>
             <li>
               S'il se trompe, il ne reçoit rien et devra apprendre à mieux écouter les murmures du vent. 🌬️
             </li>
           </ul>
           <li>
-            Si personne ne remarque le mot maudit, le filou qui l'a placé en douce sans être démasqué remporte deux pièces d'or pour sa ruse. 🏆
+            Si personne ne remarque le mot maudit, le filou qui l'a placé en douce sans être démasqué remporte deux 💰 pour sa ruse. 🏆
           </li>
           <li>
             Le jeu continue jusqu'à ce que tous les forbans aient tenté de placer leur mot maudit dans la conversation.

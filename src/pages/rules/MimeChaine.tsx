@@ -38,7 +38,7 @@ const MimeChaine = () => {
             ⚓ Une partie se joue au meilleur des trois manches, et l'équipage qui remporte au moins deux manches est couronné vainqueur de la traversée!
           </li>
           <li>
-            🏆 L'équipage gagnant embarque tout l'or des pirates vaincus, s'emparant des pièces d'or des perdants comme un véritable flibustier! 💰
+            🏆 L'équipage gagnant embarque tout l'or des pirates vaincus, s'emparant des 💰 des perdants comme un véritable flibustier! 💰
           </li>
         </ul>
       </>

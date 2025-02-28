@@ -52,7 +52,7 @@ const Osselets = () => {
             Le Capitaine renflouera avec sa cagnotte personnelle, si besoin.
           </li>
           <li>
-            Si le trésor contient un nombre impair de pièces, le pirate gagne la moitié supérieur du trésor.
+            Si le trésor contient un nombre impair de 💰, le pirate gagne la moitié supérieur du trésor.
           </li>
         </ul>
       </>
