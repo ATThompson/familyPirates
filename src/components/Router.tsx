@@ -8,7 +8,7 @@ const Router = ({ games }: { games: IGames }) => {
     <div className="h-fit p-4">
       {/* Ajouter filter-wavy */}
       <div className="h-fit">
-        <div className="text-sm text-black text-center">
+        <div className="text-sm text-black text-center text-wrap">
           <Routes>
             <Route path="/" element={<Home />} key="home" />
             <Route path="/pirates" element={<PiratesList />} key="pirates" />
