@@ -7,6 +7,7 @@ const Regles = ({ title, children }: { title: string, children: ReactElement }) 
 
             <div className='text-lg flex flex-col gap-y-4 lg:w-3xl'>
                 {children}
+                Cout de la participation au jeu 1💰.
             </div>
         </div>
     )

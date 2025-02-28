@@ -56,7 +56,6 @@ const OuiNon = () => {
             Les vainqueurs se partageront l’or des autres pirates, et les autres devront se contenter de la mer! 💎
           </li>
         </ul>
-        Cout de la participation au jeu : 1💰.
       </>
     </Regles>
   )

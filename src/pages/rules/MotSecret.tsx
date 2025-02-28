@@ -36,7 +36,6 @@ const MotSecret = () => {
             Le jeu continue jusqu'à ce que tous les forbans aient tenté de placer leur mot maudit dans la conversation.
           </li>
         </ul>
-        Cout de la participation au jeu 1💰.
       </>
     </Regles>
   )

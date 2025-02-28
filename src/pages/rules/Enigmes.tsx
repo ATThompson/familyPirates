@@ -27,7 +27,6 @@ const Enigmes = () => {
           </ul>
 
         </ul>
-        Cout de la participation 1💰par enigme.
       </>
     </Regles>
   )

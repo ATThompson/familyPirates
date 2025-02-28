@@ -39,7 +39,6 @@ const BlindTest = () => {
             </li>
           </ul>
         </ul>
-        Cout de la participation au jeu : 1💰.
       </>
     </Regles >
   )

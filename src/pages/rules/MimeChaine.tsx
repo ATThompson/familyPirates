@@ -41,7 +41,6 @@ const MimeChaine = () => {
             🏆 L'équipage gagnant embarque tout l'or des pirates vaincus, s'emparant des pièces d'or des perdants comme un véritable flibustier! 💰
           </li>
         </ul>
-        Cout de la participation pour une partie 1💰.
       </>
     </Regles>
   )
