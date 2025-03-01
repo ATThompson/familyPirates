@@ -10,6 +10,8 @@ const __dirname = path.dirname(__filename);
 
 let joueurs = joueursInit;
 
+const historique: string[] = [];
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -31,40 +33,27 @@ app.get('/api/joueurs/sorted', (req, res) => {
   }));
 });
 
-// Gérer le routage côté client
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
-});
 
-
-app.put('/api/balbal', (req, res) => {
-  const { body: { value, ids } } = req;
-
-  const joueursError = joueurs.filter(user => ids.includes(user.id) && user.piecesOr + value < 0);
-
-  if (joueursError.length > 0) {
-    res.status(400).json({ message: "La maison ne fait pas crédit! " + joueursError.map(user => " "+ user.nom) });
-  }
-  else {
-    ids.forEach((id: string) => {
-      const userIndex = joueurs.findIndex(user => user.id === parseInt(id));
-      joueurs[userIndex].piecesOr += value
-    })
-    res.json(joueurs)
-  }
+app.get('/api/historique', (req, res) => {
+  res.json(historique);
 })
-
 
 app.put('/api/joueurs/:id', (req, res) => {
   const { params: { id: idUser }, body: { value } } = req;
   const userIndex = joueurs.findIndex(user => user.id === parseInt(idUser));
-  if(joueurs[userIndex].piecesOr + value < 0){
-    res.status(400).json({message: "La maison ne fait pas crédit!"});;
-  }else{
+  if (joueurs[userIndex].piecesOr + value < 0) {
+    res.status(400).json({ message: "La maison ne fait pas crédit!" });;
+  } else {
     joueurs[userIndex].piecesOr += value
+    historique.push(new Date().toLocaleString("fr-FR") + " " + value + " pour le joueur " + joueurs[userIndex].nom)
     res.json(joueurs)
   }
 })
+
+// Gérer le routage côté client
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../dist', 'index.html'));
+});
 
 
 const PORT = process.env.PORT || 3001;

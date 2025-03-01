@@ -3,6 +3,7 @@ import { IGames } from '../types/IGame'
 import Home from '../pages/Home'
 import PiratesList from '../pages/PiratesList'
 import MimeChoix from '../pages/MimeChoix'
+import Historique from '../pages/Historique'
 const Router = ({ games }: { games: IGames }) => {
   return (
     <div className="h-fit p-4">
@@ -16,6 +17,7 @@ const Router = ({ games }: { games: IGames }) => {
               games.map(game => <Route path={`/rules/${game.name}`} element={game.rulesPage} key={'rules' + game.name} />)
             }
             <Route path='mime' element={<MimeChoix />} key="mime" />
+            <Route path='historique' element={<Historique />} key="historique" />
             <Route path="*" element={<Home />} key="home" />
           </Routes>
         </div>
