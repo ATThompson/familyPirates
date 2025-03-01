@@ -10,7 +10,7 @@ const Home = () => {
     "Avant de lever l’ancre pour l'apéritif, tous les pirates devront voter pour le plus beau déguisement. Le marin d'eau douce le plus impressionnant remportera 2💰!",
     "🏴‍☠️ Chasse au trésor 🏴‍☠️",
     <div><button onClick={() => setShowPopup(true)} className="cursor-pointer underline decoration-[#a40101]">Le premier indice </button> est dissimulé dans cette page… À vous de le dénicher pour mettre la main sur le fabuleux butin!🔍</div>,
-    "🎁 Des trésors mystérieux! 🎁",
+    "🎁 Des trésors mystérieux 🎁",
     "Pour 2💰 vous pourrez acheter une enveloppe renfermant un lot, une malédiction… ou rien du tout. Oserez-vous tenter votre chance ?",
     "🤑 La grande enchère finale 🤑",
     "Cela marquera la fin de ce grand jeu ! Avec les 💰 qu’il vous restera, vous pourrez enchérir et remporter de précieux trésors ! Serez-vous le pirate le plus rusé ou le plus démuni ?",
