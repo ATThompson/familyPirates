@@ -7,6 +7,7 @@ const MimeChaine = () => {
         <div>
           Ahoy, pirates! Préparez vous à devenir de vrais Johnny Depp.
         </div>
+        <h3>Equipage</h3>
         <ul className="ulRules">
           <li>
             Les équipages sont tirés au sort à chaque nouvelle partie, pour que chaque flibustier ait sa chance de naviguer aux côtés d'autres forbans.
@@ -14,6 +15,9 @@ const MimeChaine = () => {
           <li>
             Les pirates se rangent en file, et le premier de l'équipage reçoit un mot secret qu'il garde bien caché dans les profondeurs de son cœur.
           </li>
+        </ul>
+        <h3>Embarquement</h3>
+        <ul className="ulRules">
           <li>
             Avant de commencer à mimer, l'équipage doit décider entre un titre de film ou une expression à mimer pour la manche. 🎬💬
           </li>
@@ -34,6 +38,9 @@ const MimeChaine = () => {
               S'il se trompe, une houle de rires secoue les voiles du navire et le jeu continue avec un nouveau mot. 😂
             </li>
           </ul>
+        </ul>
+        <h3>🏆 Honneur 🏆</h3>
+        <ul className="ulRules">
           <li>
             ⚓ Une partie se joue au meilleur des trois manches, et l'équipage qui remporte au moins deux manches est couronné vainqueur de la traversée!
           </li>
