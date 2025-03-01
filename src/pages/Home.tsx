@@ -6,7 +6,7 @@ const Home = () => {
     "Ahoy, moussaillons ! Samedi, vous embarquerez pour une journée pleine d’aventures et de défis ! Chaque pirate commencera le voyage avec 6💰, mais attention… les richesses peuvent vite fondre comme un navire en pleine tempête !",
     "🎲 Des jeux vous attendent 🎲",
     "Aucune participation n'est obligatoire.",
-    "En revanche, chaque inscription vous coûtera quelques 💰… Mais vous donnera l'occasion d'en gagner davantage. Saurez-vous en gagner plus que vous n’en perdez ? Retrouvez les détails des épreuves dans la section “Règles des jeux” du menu en haut.",
+    "En revanche, chaque inscription vous coûtera quelques 💰… Mais vous donnera l'occasion d'en gagner davantage. Saurez-vous en gagner plus que vous n’en perdrez ? Retrouvez les détails des épreuves dans la section “Règles des jeux” du menu en haut.",
     "🎭 Concours de déguisement 🎭",
     "Avant de lever l’ancre pour l'apéritif, tous les pirates devront voter pour le plus beau déguisement. Le marin d'eau douce le plus impressionnant remportera 2💰!",
     "🏴‍☠️ Chasse au trésor 🏴‍☠️",
