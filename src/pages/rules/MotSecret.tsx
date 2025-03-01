@@ -15,7 +15,7 @@ const MotSecret = () => {
             Aucun pirate ne doit révéler son mot sous peine d'être jeté aux requins. 🦈
           </li>
           <li>
-            Pendant que l'équipage discute, chaque pirate doit glisser son mot maudit dans la conversation sans éveiller les soupçons des autres forbans. Celui qui parle trop franchement risque de finir au bout d'une planche! 🌊
+            Pendant que l'équipage discute, chaque pirate doit glisser son mot maudit dans la conversation sans éveiller les soupçons des autres forbans.
           </li>
           <li>
             Si un autre pirate soupçonne qu'un matelot a prononcé son mot maudit, il doit le crier bien fort devant l'équipage !
@@ -30,7 +30,7 @@ const MotSecret = () => {
             </li>
           </ul>
           <li>
-            Si personne ne remarque le mot maudit, le filou qui l'a placé en douce sans être démasqué remporte deux 💰 pour sa ruse. 🏆
+            Si personne ne remarque le mot maudit, le filou qui l'a placé en douce sans être démasqué remporte 2💰 pour sa ruse. 🏆
           </li>
           <li>
             Le jeu continue jusqu'à ce que tous les forbans aient tenté de placer leur mot maudit dans la conversation.
