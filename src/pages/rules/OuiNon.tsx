@@ -27,7 +27,7 @@ const OuiNon = () => {
         </h3>
         <ul className="ulRules">
           <li>
-            Le jeu dure 30 minutes.
+            Le jeu dure 15 minutes.
           </li>
           <li>
             À la fin de ce temps, les pirates ayant accumulé le plus d’épingles seront les vainqueurs et remporteront tout l'or des autres joueurs.💰
