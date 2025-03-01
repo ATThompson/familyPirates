@@ -20,7 +20,7 @@ export const joueurs: {
     },
     {
       id: 5,
-      nom: 'Cuistot Sylvie',
+      nom: 'Maître Coq Sylvie',
       piecesOr: 6,
     },
     {
@@ -45,12 +45,12 @@ export const joueurs: {
     },
     {
       id: 10,
-      nom: 'Contrebandier Gauthier',
+      nom: 'Maitre d\'armes Gauthier',
       piecesOr: 6,
     },
     {
       id: 11,
-      nom: 'Canonnière Margot',
+      nom: 'Contrebandière Margot',
       piecesOr: 6,
     },
     {

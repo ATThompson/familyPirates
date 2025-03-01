@@ -81,9 +81,9 @@ const PiratesList = () => {
               {/* Nom du joueur qui peut s'étendre */}
               <div className="flex-grow mx-auto ">{joueur.nom}</div>
               <div className="flex ml-auto self-center">
-                <button onClick={e => modifierNbPieces(e, joueur.id, -1)}>➖</button>
+                <button onClick={e => modifierNbPieces(e, joueur.id, -1)} className='text-red-500'>⊖</button>
                 💰
-                <button onClick={e => modifierNbPieces(e, joueur.id, 1)}>✚</button>
+                <button onClick={e => modifierNbPieces(e, joueur.id, 1)} className='text-green-700'>⊕</button>
               </div>
             </div>
           </div>
