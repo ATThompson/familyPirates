@@ -55,16 +55,11 @@ export const joueurs: {
     },
     {
       id: 12,
-      nom: 'Nénette la Borgne',
-      piecesOr: 6,
-    },
-    {
-      id: 13,
       nom: 'Jacqueline la Naufragée',
       piecesOr: 6,
     },
     {
-      id: 14,
+      id: 13,
       nom: 'Edwige Jambe de bois',
       piecesOr: 6,
     },
